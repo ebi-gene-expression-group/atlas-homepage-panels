@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ExperimentBox from './ExperimentBox'
+import CardContainer from './CardContainer'
 import HomePagePanel from './HomePagePanel'
 
 class LandingPage extends React.Component {
@@ -43,8 +43,8 @@ class LandingPage extends React.Component {
 		            </div>
 		        </div>
 		    </div>
-		    <ExperimentBox key={`baseline`} title={`Baseline Experiment`}/>
-		  	<ExperimentBox key={`differential`} title={`Differential Experiment`}/>
+		    <CardContainer key={`baseline`} title={`Baseline Experiment`}/>
+		  	<CardContainer key={`differential`} title={`Differential Experiment`}/>
 		</div>
   	)
 
