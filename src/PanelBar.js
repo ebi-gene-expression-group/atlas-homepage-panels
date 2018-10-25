@@ -22,17 +22,10 @@ class PanelBar extends React.Component {
     var cardNames = this.props.panelNames
 
     var panelNameList = cardNames.map(cardName => 
-      cardName==`Species` ?
         <li className="tabs-title" key={cardName}>
-          {cardName==this.state.panelName ? 
-          <a id={cardName.toLowerCase()} href="#by-species" aria-selected="true" onClick={this.changePanel}>By species</a> :
-          <a id={cardName.toLowerCase()} href="#by-species" aria-selected="false" onClick={this.changePanel}>By species</a>}
-
-        </li> :
-        <li className="tabs-title" key={cardName}>
-          {cardName==this.state.panelName ? 
-            <a id={cardName.toLowerCase()} href="#by-animals" aria-selected="true" onClick={this.changePanel}>{cardName}</a> :
-            <a id={cardName.toLowerCase()} href="#by-animals" aria-selected="false" onClick={this.changePanel}>{cardName}</a>}
+          {cardName==this.state.panelName  ? 
+            <a id={cardName.toLowerCase()} href={`#by-${cardName}`} aria-selected="true" onClick={this.changePanel}>{cardName}</a> :
+            <a id={cardName.toLowerCase()} href={`#by-${cardName}`} aria-selected="false" onClick={this.changePanel}>{cardName}</a>}
         </li>
     )
 

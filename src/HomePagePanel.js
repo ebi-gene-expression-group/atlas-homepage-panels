@@ -4,65 +4,69 @@ import PropTypes from 'prop-types'
 import CardContainer from './CardContainer'
 import PanelBar from './PanelBar'
 import Card from './Card'
+import AtlasHPCard from 'atlas-homepage-cards'
 
 class HomePagePanel extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-    	panelName: `species`
+    	panelNameA: `species`,
+    	panelNameB: `featured`
     }
-    this.changePanel = this.changePanel.bind(this)
+    this.changePanelA = this.changePanelA.bind(this)
+    this.changePanelB = this.changePanelB.bind(this)
   }
 
-  changePanel(event){
+  changePanelA(event){
   	this.setState({
-  		panelName:  event.target.id
+  		panelNameA:  event.target.id
   	})
   }
 
-
+  changePanelB(event){
+  	this.setState({
+  		panelNameB:  event.target.id
+  	})
+  }
+  
 
   render() {
+  	var {panelNameAList, panelNameBList, host} = this.props
   	return (
   		<div className="row expanded margin-top-large" data-equalizer>
 
 	    	 <div className="small-12 medium-12 large-6 columns">
-	    	  <div className="callout experiment-list-latest padding-bottom-for-button" data-equalizer-watch>
 			    <div className="callout browse-by padding-bottom-for-button" data-equalizer-watch>
 					
-					<PanelBar panelNames={[`Species`, `Animals`, `Plants`, `Fungi`]} onClick={this.changePanel}/>
+					<PanelBar panelNames={panelNameAList} onClick={this.changePanelA}/>
 				    
 				    <div className="tabs-content" data-tabs-content="browse-by-tabs">
-				        <CardContainer panelName={this.state.panelName} CardType={Card}/>
+				        <CardContainer key="species" panelName={this.state.panelNameA} CardType={AtlasHPCard} host={host}/>
 				    </div>
 			
-			      <div className="row align-row-to-bottom">
-			        <div className="small-6 small-centered columns margin-top-large">
-			            <a id="viewAllLink" href='/gxa/experiments' className="button float-center">View all species</a>
+			       	<div className="row align-row-to-bottom">
+			         <div className="small-6 small-centered columns margin-top-large">
+			            <a id="viewAllLink" href={`${host}/experiments`} className="button float-center">View all species</a>
+			         </div>
 			        </div>
-			       </div>
-
 			    </div>
-			 </div>
 			</div>
 
 
 			<div className="small-12 medium-12 large-6 columns">
 			 <div className="callout experiment-list-latest padding-bottom-for-button" data-equalizer-watch>
-	 			 <div className="callout browse-by padding-bottom-for-button" data-equalizer-watch>
-				    <PanelBar panelNames={[`Latest experiments`]} onClick={this.changePanel}/>
-				    
+				    <PanelBar panelNames={panelNameBList} onClick={this.changePanelB}/>
+
 				    <div className="tabs-content" data-tabs-content="browse-by-tabs">
-				        <CardContainer panelName={this.state.panelName} CardType={Card}/>
+				        <CardContainer key="experiments" panelName={this.state.panelNameB} CardType={AtlasHPCard} host={host}/>
 			    	</div>
 			       
 			       <div className="row align-row-to-bottom">
 			        <div className="small-6 small-centered columns margin-top-large">
-			            <a id="viewAllLink" href='/gxa/experiments' className="button float-center">View all species</a>
+			            <a id="viewAllLink" href={`${host}/experiments`} className="button float-center">View all species</a>
 			        </div>
 			       </div>
 			    </div>
-			 </div>
 			</div>
 
 		</div>

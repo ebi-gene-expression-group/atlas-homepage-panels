@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Card from './Card'
 
 class CardContainer extends React.Component {
   constructor(props) {
@@ -7,21 +8,22 @@ class CardContainer extends React.Component {
   }
 
   render() {
-  	var cardNames = {
-  		species: [`HCA`,`HCB`,`HCD`],
-  		animals: [`animal1`, `animal2`],
-  		plants: [`plant1`],
-  		fungi: [`F1`,`F2`,`F3`,`F4`]
-  	}
-    var {CardType} = this.props
+
+    var {CardType, panelName, host} = this.props
+
   	return (
-      <div className="row margin-bottom-xxlarge">
-        {cardNames[this.props.panelName].map(cardName => <CardType key={cardName} cardName={cardName}/>)}
-      </div>
-
+      panelName == `featured` ?
+        <div className="row margin-bottom-xxlarge">
+            <Card host={host} cardName={`HCA`}/>
+        </div> :
+          panelName == `latest experiments` ?
+          <div className="row margin-bottom-xxlarge">
+              <CardType host={host} resource={`json/experiments/latestExperiments`} latestExperiments={true}/>
+          </div> :
+          <div className="row margin-bottom-xxlarge">
+              <CardType host={host} resource={`json/experiments/popularSpecies`} latestExperiments={false}/>
+          </div>
     )
-
-
   }
 }
 

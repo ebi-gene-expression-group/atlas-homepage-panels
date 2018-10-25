@@ -1,4 +1,4 @@
-import HomePagePanel from './HomePagePanel.js'
 import {withRouter} from 'react-router-dom'
-
-export default withRouter(HomePagePanel)
+import LandingPageRoute from './LandingPageRoute'
+import HomePagePanel from './HomePagePanel'
+export default HomePagePanel

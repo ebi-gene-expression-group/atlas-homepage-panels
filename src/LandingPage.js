@@ -1,14 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import CardContainer from './CardContainer'
-import HomePagePanel from './HomePagePanel'
+import AtlasHPCard from 'atlas-homepage-cards'
+const LandingPage =()=> {
 
-class LandingPage extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
   	return (
 	  	 <div className="row">
 		    <div className="small-12 columns">
@@ -16,7 +11,7 @@ class LandingPage extends React.Component {
 
 		        <div className="row">
 		            <div className="small-1 column">
-		                <p><img src={"assets/img/HCA-logo.jpg"}/></p>
+		                <p><img src={`assets/img/HCA-logo.jpg`}/></p>
 		            </div>
 
 		            <div className="small-11 columns">
@@ -43,16 +38,16 @@ class LandingPage extends React.Component {
 		            </div>
 		        </div>
 		    </div>
-		    <CardContainer key={`baseline`} title={`Baseline Experiment`}/>
-		  	<CardContainer key={`differential`} title={`Differential Experiment`}/>
+		    <h3>Baseline Experiment</h3>
+		    	<CardContainer key="Baseline" panelName={`species`} CardType={AtlasHPCard} host={'http://localhost:8080/gxa/sc/'}/>
+
+		    <h3>Differential Experiment</h3>
+		  		<CardContainer key="Differential" panelName={`species`} CardType={AtlasHPCard} host={'http://localhost:8080/gxa/sc/'}/>
+
 		</div>
   	)
 
-  }
-}
+ }
 
-LandingPage.propTypes = {
-  atlasUrl: PropTypes.string
-}
 
 export default LandingPage

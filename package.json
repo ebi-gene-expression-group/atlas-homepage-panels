@@ -29,10 +29,12 @@
     "url": "https://github.com/gxa/my-package.git"
   },
   "dependencies": {
+    "atlas-homepage-cards": "file:../atlas-homepage-cards",
     "file-loader": "^2.0.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "urijs": "^1.19.1",
     "url-loader": "^1.1.2"
@@ -47,10 +49,12 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^23.4.0",
     "react-test-renderer": "^16.4.1",
+    "style-loader": "^0.23.1",
     "webpack": "^4.16.0",
     "webpack-command": "^0.4.1",
     "webpack-serve": "^2.0.2",

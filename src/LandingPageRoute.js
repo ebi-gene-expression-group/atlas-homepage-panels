@@ -1,21 +1,21 @@
 import React from 'react';
 import {Switch,Route,withRouter} from 'react-router-dom';
 import LandingPage from './LandingPage'
+import HomePagePanel from './HomePagePanel'
 
-const About = () =>(
+const AboutPage = () =>(
 	<div className="NotFoundPage"> Home Page</div>
 );
 
 
-const LandingPageRoute = ({value,species,category,ResultElementClass,handleSelections,routepath, nextSelectedFacets}) => (
+const LandingPageRoute = ({host, resource, panelNameAList, panelNameBList}) => (
 	<div>
 		<Switch>
-			// <Route exact path ={`/gxa/sc/search?geneID=${value}&species=${species}`} 
-			// render={props => (<FetchLoader {...props} nextSelectedFacets={{}} handleSelections={handleSelections} ResultElementClass={ResultElementClass} 
-			// host="http://localhost:8080/gxa/sc/json/search?ensgene=" resource={value} species={species?species.replace('+',' '):species}/>)}/>
 
-			<Route exact path="/" component={AboutPage}/>
+			<Route exact path="/" render={props => (<HomePagePanel {...props} host={host}
+				resource={resource} panelNameAList={panelNameAList} panelNameBList={panelNameBList} />)}/>
 
+			<Route path="/HCA" component={LandingPage}/>
 		</Switch>
 
 	</div>
