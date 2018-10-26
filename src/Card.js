@@ -26,7 +26,8 @@ class Card extends React.Component {
 }
 
 Card.propTypes = {
-  atlasUrl: PropTypes.string
+  host: PropTypes.string.isRequired,
+  CardType: PropTypes.func
 }
 
 export default Card
