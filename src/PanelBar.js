@@ -13,19 +13,20 @@ class PanelBar extends React.Component {
 
   changePanel(event){
     this.setState({
-      panelName: event.id
+      panelName: event.target.id
     })
     this.props.onClick(event)
   }
 
   render() {
-    var cardNames = this.props.panelNames
-
-    var panelNameList = cardNames.map(cardName => 
-        <li className="tabs-title" key={cardName}>
-          {cardName==this.state.panelName  ? 
-            <a id={cardName.toLowerCase()} href={`#by-${cardName}`} aria-selected="true" onClick={this.changePanel}>{cardName}</a> :
-            <a id={cardName.toLowerCase()} href={`#by-${cardName}`} aria-selected="false" onClick={this.changePanel}>{cardName}</a>}
+    var panelNames = this.props.panelNames
+    var panelNameList = panelNames.map(panelName => 
+        <li className="tabs-title" key={panelName}>
+          {
+            panelName==this.state.panelName ? 
+             <a aria-selected="true"  id={panelName} key={panelName} onClick={this.changePanel}>{panelName}</a> :
+             <a aria-selected="false" id={panelName} key={panelName} onClick={this.changePanel}>{panelName}</a>
+          }
         </li>
     )
 
@@ -40,7 +41,7 @@ class PanelBar extends React.Component {
 }
 
 PanelBar.propTypes = {
-  atlasUrl: PropTypes.string
+  pnaelNames: PropTypes.arrayOf(PropTypes.string)
 }
 
 export default PanelBar
