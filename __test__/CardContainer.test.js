@@ -13,21 +13,24 @@ Enzyme.configure({ adapter: new Adapter() })
 describe(`CardContainer`, () => {
   const props = {  host: `link`, panelName: `panel`, CardType: ()=>`I am a card`}
   test(`uses a LatestExperimentCard for latest experiment entries`, () => {
-     expect(shallow(<CardContainer {...props} panelName={`Latest experiments`}/>).find(LatestExperimentCardContainer).length).toEqual(1)
-     expect(shallow(<CardContainer {...props} panelName={`Latest experiments`}/>).find(Card).length).toEqual(0)
-     expect(shallow(<CardContainer {...props} panelName={`Latest experiments`}/>).find(props.CardType).length).toEqual(0)
+  	 const wrapper = shallow(<CardContainer {...props} panelName={`Latest experiments`}/>)
+     expect(wrapper.find(LatestExperimentCardContainer).length).toEqual(1)
+     expect(wrapper.find(Card).length).toEqual(0)
+     expect(wrapper.find(props.CardType).length).toEqual(0)
   })
 
   test(`uses a static card for featured experiment`, () => {
-     expect(shallow(<CardContainer {...props} panelName={`Featured`}/>).find(LatestExperimentCardContainer).length).toEqual(0)
-     expect(shallow(<CardContainer {...props} panelName={`Featured`}/>).find(Card).length).toEqual(1)
-     expect(shallow(<CardContainer {...props} panelName={`Featured`}/>).find(props.CardType).length).toEqual(0)
+  	 const wrapper = shallow(<CardContainer {...props} panelName={`Featured`}/>)
+     expect(wrapper.find(LatestExperimentCardContainer).length).toEqual(0)
+     expect(wrapper.find(Card).length).toEqual(1)
+     expect(wrapper.find(props.CardType).length).toEqual(0)
   })
 
   test(`uses a default/prop card for species experiment`, () => {
-     expect(shallow(<CardContainer {...props} />).find(LatestExperimentCardContainer).length).toEqual(0)
-     expect(shallow(<CardContainer {...props} />).find(Card).length).toEqual(0)
-     expect(shallow(<CardContainer {...props} />).find(props.CardType).length).toEqual(1)
+  	 const wrapper = shallow(<CardContainer {...props} />)
+     expect(wrapper.find(LatestExperimentCardContainer).length).toEqual(0)
+     expect(wrapper.find(Card).length).toEqual(0)
+     expect(wrapper.find(props.CardType).length).toEqual(1)
   })
 
   test(`matches snapshot`, () => {

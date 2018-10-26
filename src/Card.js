@@ -2,13 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import logo from './assets/img/HCA-logo.jpg'
 
-class Card extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
-  	var {host, cardName} = this.props
+const Card = ({host, cardName}) => {
   	return (
 		<div className="small-4 columns combo text-center padding-top-medium">
 	  		<span>I am a card for {cardName}</span> <br />
@@ -21,8 +15,6 @@ class Card extends React.Component {
 	        </a>
 		</div>
   	)
-
-  }
 }
 
 Card.propTypes = {

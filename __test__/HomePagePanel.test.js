@@ -13,19 +13,20 @@ Enzyme.configure({ adapter: new Adapter() })
 describe(`HomePagePanel`, () => {
   const props = {panelNameAList:[`foo1`, `foo2`, `foo3`], panelNameBList: [`test1`, `test2`], host: `link` }
   test(`should have two panel boxes`, () => {
-     expect(shallow(<HomePagePanel {...props}/>).find(PanelBar).length).toEqual(2)
-     expect(shallow(<HomePagePanel {...props}/>).find(CardContainer).length).toEqual(2)
+     const wrapper = shallow(<HomePagePanel {...props}/>)
+     expect(wrapper.find(PanelBar).length).toEqual(2)
+     expect(wrapper.find(CardContainer).length).toEqual(2)
   })
 
   test(`renders different panel page after clicking each panel bar`, () => {
     const wrapper = shallow(<HomePagePanel {...props}/>)
-    wrapper.find(PanelBar).at(0).simulate('click', { target: { id: 'UsernameA' } })
+    wrapper.find(PanelBar).at(0).simulate(`click`, { target: { id: `foo1` } })
     wrapper.update()
-    expect(wrapper.state().panelNameA).toEqual(`UsernameA`)
+    expect(wrapper.state().panelNameA).toEqual(`foo1`)
 
-    wrapper.find(PanelBar).at(1).simulate('click', { target: { id: 'UsernameB' } })
+    wrapper.find(PanelBar).at(1).simulate(`click`, { target: { id: `test1` } })
     wrapper.update()
-    expect(wrapper.state().panelNameB).toEqual(`UsernameB`)
+    expect(wrapper.state().panelNameB).toEqual(`test1`)
   })
 
   test(`matches snapshot`, () => {

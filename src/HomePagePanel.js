@@ -13,22 +13,18 @@ class HomePagePanel extends React.Component {
     	panelNameA: `Species`,
     	panelNameB: `Featured`
     }
-    this.changePanelA = this.changePanelA.bind(this)
-    this.changePanelB = this.changePanelB.bind(this)
+    this.changePanel = this.changePanel.bind(this)
   }
 
-  changePanelA(event){
+  changePanel(event){
+  	this.props.panelNameAList.includes(event.target.id ) ?
   	this.setState({
   		panelNameA:  event.target.id
-  	})
-  }
-
-  changePanelB(event){
+  	}) :
   	this.setState({
   		panelNameB:  event.target.id
   	})
   }
-  
 
   render() {
   	var {panelNameAList, panelNameBList, host} = this.props
@@ -38,7 +34,7 @@ class HomePagePanel extends React.Component {
 	    	 <div className="small-12 medium-12 large-6 columns">
 				<div className="callout experiment-list-latest padding-bottom-for-button" data-equalizer-watch>
 
-					<PanelBar key="species-bar" panelNames={panelNameAList} onClick={this.changePanelA}/>
+					<PanelBar key="species-bar" panelNames={panelNameAList} onClick={this.changePanel}/>
 				    
 				    <div className="tabs-content" data-tabs-content="browse-by-tabs">
 				        <CardContainer key="species" panelName={this.state.panelNameA} CardType={AtlasHPCard} host={host}/>
@@ -56,7 +52,7 @@ class HomePagePanel extends React.Component {
 
 			<div className="small-12 medium-12 large-6 columns">
 			 <div className="callout experiment-list-latest padding-bottom-for-button" data-equalizer-watch>
-				    <PanelBar key="experiments-bar" panelNames={panelNameBList} onClick={this.changePanelB}/>
+				    <PanelBar key="experiments-bar" panelNames={panelNameBList} onClick={this.changePanel}/>
 
 				    <div className="tabs-content" data-tabs-content="browse-by-tabs">
 				        <CardContainer key="experiments" panelName={this.state.panelNameB} CardType={AtlasHPCard} host={host}/>

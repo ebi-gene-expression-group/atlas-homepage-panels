@@ -21,13 +21,13 @@ class PanelBar extends React.Component {
   render() {
     var panelNames = this.props.panelNames
     var panelNameList = panelNames.map(panelName => 
-        <li className="tabs-title" key={panelName}>
-          {
-            panelName==this.state.panelName ? 
-             <a aria-selected="true"  id={panelName} key={panelName} onClick={this.changePanel}>{panelName}</a> :
-             <a aria-selected="false" id={panelName} key={panelName} onClick={this.changePanel}>{panelName}</a>
-          }
-        </li>
+      <li className="tabs-title" key={panelName}>
+        {
+          panelName==this.state.panelName ? 
+           <a aria-selected="true"  id={panelName} key={panelName} onClick={this.changePanel}>{panelName}</a> :
+           <a aria-selected="false" id={panelName} key={panelName} onClick={this.changePanel}>{panelName}</a>
+        }
+      </li>
     )
 
     return (
@@ -41,7 +41,8 @@ class PanelBar extends React.Component {
 }
 
 PanelBar.propTypes = {
-  pnaelNames: PropTypes.arrayOf(PropTypes.string)
+  pnaelNames: PropTypes.arrayOf(PropTypes.string),
+  onClick: PropTypes.func.isRequired
 }
 
 export default PanelBar
