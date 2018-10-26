@@ -2,7 +2,7 @@ const CleanWebpackPlugin = require(`clean-webpack-plugin`)
 
 module.exports = {
   entry: {
-    myComponent: [`babel-polyfill`, `whatwg-fetch`, `./html/render.js`]
+    HomePagePanel: [`babel-polyfill`, `whatwg-fetch`, `./html/render.js`]
   },
 
   plugins: [
@@ -21,7 +21,7 @@ module.exports = {
       cacheGroups: {
         facetedSearch: {
           test: /[\\/]src[\\/]/,
-          name: `myComponent`,
+          name: `HomePagePanel`,
           priority: -20
         },
         vendors: {
