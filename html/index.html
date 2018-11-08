@@ -24,8 +24,13 @@
 <!-- Set to http://localhost:8080/gxa/ or http://localhost:8080/gxa_sc/ -- Remember the trailing slash! -->
 <script>
   HomePagePanel.render({
-    host: 'http://localhost:8080/gxa/sc/',
-    resource: 'json/experiments/latestExperiments',
+    host: `http://localhost:8080/gxa/sc/`,
+    resource: {
+        Featured: `hca`
+        Latest: `json/experiments/latestExperiments`,
+        Species: `json/experiments/popularSpecies`,
+        Animals: `json/experiments/popularSpecies?kingdom=animals`
+    },
     panelNameAList: [`Species`, `Animals`],
     panelNameBList: [`Latest experiments`,`Featured`]
   }, 'target')
