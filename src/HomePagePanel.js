@@ -10,8 +10,8 @@ class HomePagePanel extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-    	panelNameA: `Species`,
-    	panelNameB: `Featured`
+    	panelNameA: this.props.panelNameAList[0],
+    	panelNameB: this.props.panelNameBList[0]
     }
     this.changePanel = this.changePanel.bind(this)
   }
