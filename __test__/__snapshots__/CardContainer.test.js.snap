@@ -4,6 +4,6 @@ exports[`CardContainer matches snapshot 1`] = `
 <div
   className="row margin-bottom-xxlarge"
 >
-  I am a card
+  I am a component
 </div>
 `;

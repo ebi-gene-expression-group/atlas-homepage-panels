@@ -7,11 +7,12 @@ import Adapter from 'enzyme-adapter-react-16'
 import HomePagePanel from '../src/HomePagePanel'
 import PanelBar from '../src/PanelBar'
 import CardContainer from '../src/CardContainer'
+import {panelNameAList, panelNameBList, resource, host, CardType} from './TestUtils'
 
 Enzyme.configure({ adapter: new Adapter() })
 
 describe(`HomePagePanel`, () => {
-  const props = {panelNameAList:[`foo1`, `foo2`, `foo3`], panelNameBList: [`test1`, `test2`], host: `link` }
+  const props = {panelNameAList, panelNameBList, resource, host, CardType}
   test(`should have two panel boxes`, () => {
      const wrapper = shallow(<HomePagePanel {...props}/>)
      expect(wrapper.find(PanelBar).length).toEqual(2)

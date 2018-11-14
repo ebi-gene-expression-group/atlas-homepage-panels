@@ -2,6 +2,22 @@
 const panelNameAList = [`foo1`, `foo2`, `foo3`]
 const panelNameBList = [`test1`, `test2`]
 
+const resource = {
+  foo1: `link1`,
+  foo2: `link2`,
+  foo3: `link3`,
+  test1: `endpoint1`,
+  test2: `endpoint2`,
+  Latest: `endpoint3`,
+  panel: `test1`,
+  Featured: `endpoint4`
+}
+
+const host = `http://`
+
+const panelName = `panel`
+
+const CardType = () => `I am a component`
 
 // Stolen from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 const getRandomInt = (min, max) => {
@@ -36,4 +52,4 @@ const latestExperimentEntries = () => {
   ]
 }
 
-export {panelNameAList, panelNameBList, getRandomInt, latestExperimentEntries}
+export {panelNameAList, panelNameBList, getRandomInt, latestExperimentEntries, resource, host, CardType}

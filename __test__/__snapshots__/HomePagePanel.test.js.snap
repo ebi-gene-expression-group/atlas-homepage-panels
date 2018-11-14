@@ -60,31 +60,7 @@ exports[`HomePagePanel matches snapshot 1`] = `
         <div
           className="row margin-bottom-xxlarge"
         >
-          <div
-            className="row column"
-          >
-            <div
-              className="callout alert small"
-            >
-              <h5>
-                Oops!
-              </h5>
-              <p>
-                There was a problem communicating with the server. Please try again later.
-                <br />
-                If the error persists, in order to help us debug the issue, please copy the URL and this message and send it to us via 
-                <a
-                  href="https://www.ebi.ac.uk/support/gxasc"
-                >
-                  the EBI Support & Feedback system
-                </a>
-                :
-              </p>
-              <code>
-                ReferenceError: fetch is not defined
-              </code>
-            </div>
-          </div>
+          I am a component
         </div>
       </div>
       <div
@@ -95,7 +71,7 @@ exports[`HomePagePanel matches snapshot 1`] = `
         >
           <a
             className="button float-center"
-            href="linkexperiments"
+            href="http://experiments"
             id="viewAllLink"
           >
             View all species
@@ -148,38 +124,7 @@ exports[`HomePagePanel matches snapshot 1`] = `
         <div
           className="row margin-bottom-xxlarge"
         >
-          <div
-            className="small-4 columns combo text-center padding-top-medium"
-          >
-            <span>
-              I am a card for 
-              HCA
-            </span>
-             
-            <br />
-            <a
-              href="link/hca"
-            >
-              <img
-                className="margin-bottom-large experiment-thumbnail"
-                height="800"
-                src="test-file-stub"
-              />
-              <h6>
-                <a
-                  href="/gxa/experiments/E-MTAB-4344"
-                >
-                  Human tissues
-                </a>
-                <br />
-                <a
-                  href="/gxa/experiments/E-GEOD-26284"
-                >
-                  Human cells
-                </a>
-              </h6>
-            </a>
-          </div>
+          I am a component
         </div>
       </div>
       <div
@@ -190,7 +135,7 @@ exports[`HomePagePanel matches snapshot 1`] = `
         >
           <a
             className="button float-center"
-            href="link/experiments"
+            href="http://experiments"
             id="viewAllLink"
           >
             View all species

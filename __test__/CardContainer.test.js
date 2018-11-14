@@ -7,11 +7,12 @@ import Adapter from 'enzyme-adapter-react-16'
 import CardContainer from '../src/CardContainer'
 import LatestExperimentCardContainer from '../src/LatestExperimentCardContainer'
 import Card from '../src/Card'
+import {panelName, resource, host, CardType} from './TestUtils'
 
 Enzyme.configure({ adapter: new Adapter() })
 
 describe(`CardContainer`, () => {
-  const props = {  host: `link`, panelName: `panel`, CardType: ()=>`I am a card`}
+  const props = {host, resource, panelName, CardType}
   test(`uses a LatestExperimentCard for latest experiment entries`, () => {
   	 const wrapper = shallow(<CardContainer {...props} panelName={`Latest experiments`}/>)
      expect(wrapper.find(LatestExperimentCardContainer).length).toEqual(1)
