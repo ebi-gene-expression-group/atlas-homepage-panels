@@ -25,7 +25,7 @@ class HomePagePanel extends React.Component {
   }
 
   render() {
-  	var {panelNameAList, panelNameBList, host, resource, cardType} = this.props
+  	var {panelNameAList, panelNameBList, host, resource, CardType} = this.props
   	return (
   		<div className="row expanded margin-top-large" data-equalizer>
 
@@ -35,7 +35,7 @@ class HomePagePanel extends React.Component {
 					<PanelBar key="species-bar" panelNames={panelNameAList} onClick={this.changePanel}/>
 				    
 				    <div className="tabs-content" data-tabs-content="browse-by-tabs">
-				        <CardContainer key="species" panelName={this.state.panelNameA} CardType={cardType} host={host} resource={resource}/>
+				        <CardContainer key="species" panelName={this.state.panelNameA} CardType={CardType} host={host} resource={resource}/>
 				    </div>
 			
 			       	<div className="row align-row-to-bottom">
@@ -53,7 +53,7 @@ class HomePagePanel extends React.Component {
 				    <PanelBar key="experiments-bar" panelNames={panelNameBList} onClick={this.changePanel}/>
 
 				    <div className="tabs-content" data-tabs-content="browse-by-tabs">
-				        <CardContainer key="experiments" panelName={this.state.panelNameB} CardType={cardType} host={host} resource={resource}/>
+				        <CardContainer key="experiments" panelName={this.state.panelNameB} CardType={CardType} host={host} resource={resource}/>
 			    	</div>
 			       
 			       <div className="row align-row-to-bottom">
@@ -75,7 +75,7 @@ HomePagePanel.propTypes = {
   panelNameBList: PropTypes.arrayOf(PropTypes.string).isRequired,
   host: PropTypes.string.isRequired,
   resource: PropTypes.arrayOf(PropTypes.string).isRequired,
-  cardType: PropTypes.func.isRequired
+  CardType: PropTypes.func.isRequired
 }
 
 export default HomePagePanel
