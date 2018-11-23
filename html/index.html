@@ -26,12 +26,15 @@
   HomePagePanel.render({
     host: `http://localhost:8080/gxa/sc/`,
     resource: {
-        Featured: `hca`,
+        Featured: `alpha/hca`,
         Latest: `json/experiments/latestExperiments`,
         Species: `json/experiments/popular-species`,
-        Animals: `json/experiments/popular-species?kingdom=animals`
+        Animals: `json/experiments/popular-species?kingdom=animals`,
+        Plants: `json/experiments/popular-species?kingdom=plants`,
+        Fungi: `json/experiments/popular-species?kingdom=fungi`,
+        Protists: `json/experiments/popular-species?kingdom=protists`
     },
-    panelNameAList: [`Species`, `Animals`],
+    panelNameAList: [`Species`, `Animals`, `Plants`, `Fungi`, `Protists`],
     panelNameBList: [`Latest experiments`,`Featured`]
   }, 'target')
 </script>

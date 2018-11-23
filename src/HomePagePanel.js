@@ -33,9 +33,9 @@ class HomePagePanel extends React.Component {
 				<div className="callout experiment-list-latest padding-bottom-for-button" data-equalizer-watch>
 
 					<PanelBar key="species-bar" panelNames={panelNameAList} onClick={this.changePanel}/>
-				    
-					<CardType host={'http://localhost:8080/gxa/sc/'} resource={'json/experiments/popular-species'} />
-			
+					<div className="tabs-content" data-tabs-content="browse-by-tabs">
+				        <CardContainer key="species" panelName={this.state.panelNameA} CardType={CardType} host={host} resource={resource}/>
+			    	</div>
 			       	<div className="row align-row-to-bottom">
 			         <div className="small-6 small-centered columns margin-top-large">
 			            <a id="viewAllLink" href={`${host}experiments`} className="button float-center">View all species</a>
