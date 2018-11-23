@@ -1,6 +1,6 @@
 {
   "name": "scxa-homepage-panels",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "My package does some neat things",
   "main": "lib/index.js",
   "scripts": {
