@@ -29,7 +29,7 @@
     "url": "https://github.com/gxa/my-package.git"
   },
   "dependencies": {
-    "atlas-homepage-cards": "file:../atlas-homepage-cards",
+    "atlas-homepage-cards": "^1.1.0",
     "file-loader": "^2.0.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
