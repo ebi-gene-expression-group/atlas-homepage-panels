@@ -123,9 +123,7 @@ exports[`HomePagePanel matches snapshot 1`] = `
       >
         <div
           className="row margin-bottom-xxlarge"
-        >
-          I am a component
-        </div>
+        />
       </div>
       <div
         className="row align-row-to-bottom"
