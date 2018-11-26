@@ -12,9 +12,7 @@ class PanelBar extends React.Component {
   }
 
   changePanel(event){
-    this.setState({
-      panelName: event.target.id
-    })
+    this.setState({panelName: event.target.id})
     this.props.onClick(event)
   }
 
@@ -24,8 +22,8 @@ class PanelBar extends React.Component {
       <li className="tabs-title" key={panelName}>
         {
           panelName==this.state.panelName ? 
-           <a aria-selected="true"  id={panelName} key={panelName} onClick={this.changePanel}>{panelName}</a> :
-           <a aria-selected="false" id={panelName} key={panelName} onClick={this.changePanel}>{panelName}</a>
+            <a aria-selected="true"  id={panelName} key={panelName} onClick={this.changePanel}>{panelName}</a> :
+            <a aria-selected="false" id={panelName} key={panelName} onClick={this.changePanel}>{panelName}</a>
         }
       </li>
     )
