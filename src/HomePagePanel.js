@@ -45,7 +45,7 @@ class HomePagePanel extends React.Component {
 				    <PanelBar key="experiments-bar" panelNames={panelNameBList} onClick={this.changePanel}/>
 				    <div className="tabs-content" data-tabs-content="browse-by-tabs">
 				    	<div className="row margin-bottom-xxlarge">
-				        	<CardContainer key="experiments" panelName={this.state.panelNameB} CardType={CardType} host={host} resource={resource}/>
+				        	<CardContainer key="experiments" panelName={this.state.panelNameB} host={host} resource={resource}/>
 				        </div>
 			    	</div> 
 			      <div className="row align-row-to-bottom">
