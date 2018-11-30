@@ -1,35 +1,36 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import CardContainer from './CardContainer'
+
+import PanelContent from './PanelContent'
 import PanelBar from './PanelBar'
 
 class HomePagePanel extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-    	panelNameA: this.props.panelNameAList[0],
-    	panelNameB: this.props.panelNameBList[0]
+    	speciesTabName: Object.keys(this.props.speciesResources)[0],
+    	experimentTabName: Object.keys(this.props.experimentResources)[0]
     }
     this.changePanel = this.changePanel.bind(this)
   }
 
   changePanel(event){
-  	this.props.panelNameAList.includes(event.target.id ) ?
-    	this.setState({panelNameA:  event.target.id}) :
-    	this.setState({panelNameB:  event.target.id})
+  	this.props.speciesResources[event.target.id] ?
+    	this.setState({speciesTabName:  event.target.id}) :
+    	this.setState({experimentTabName:  event.target.id})
   }
 
   render() {
-  	const {panelNameAList, panelNameBList, host, resource, CardType} = this.props
+  	const {host, speciesResources, experimentResources, SpeciesCardType, LatestExperimentCardType} = this.props
   	return (
   		<div className="row expanded margin-top-large" data-equalizer>
 
 	    	<div className="small-12 medium-12 large-6 columns">
 				  <div className="callout experiment-list-latest padding-bottom-for-button" data-equalizer-watch>
-            <PanelBar key="species-bar" panelNames={panelNameAList} onClick={this.changePanel}/>
+            <PanelBar panelNames={Object.keys(speciesResources)} onClick={this.changePanel}/>
             <div className="tabs-content" data-tabs-content="browse-by-tabs">
 						  <div className="row margin-bottom-xxlarge">
-				        <CardType key="species" host={host} resource={resource[this.state.panelNameA]}/>
+				        <PanelContent host={host} panelName={this.state.speciesTabName} resource={speciesResources} CardType={SpeciesCardType} />
 				      </div>
 			    	</div>
             <div className="row align-row-to-bottom">
@@ -42,10 +43,10 @@ class HomePagePanel extends React.Component {
 
 			  <div className="small-12 medium-12 large-6 columns">
 			    <div className="callout experiment-list-latest padding-bottom-for-button" data-equalizer-watch>
-				    <PanelBar key="experiments-bar" panelNames={panelNameBList} onClick={this.changePanel}/>
+				    <PanelBar panelNames={Object.keys(experimentResources)} onClick={this.changePanel}/>
 				    <div className="tabs-content" data-tabs-content="browse-by-tabs">
 				    	<div className="row margin-bottom-xxlarge">
-				        	<CardContainer key="experiments" panelName={this.state.panelNameB} host={host} resource={resource}/>
+				        	<PanelContent host={host} panelName={this.state.experimentTabName} host={host} resource={experimentResources} CardType={LatestExperimentCardType} />
 				        </div>
 			    	</div> 
 			      <div className="row align-row-to-bottom">
@@ -62,10 +63,9 @@ class HomePagePanel extends React.Component {
 }
 
 HomePagePanel.propTypes = {
-  panelNameAList: PropTypes.arrayOf(PropTypes.string).isRequired,
-  panelNameBList: PropTypes.arrayOf(PropTypes.string).isRequired,
   host: PropTypes.string.isRequired,
-  resource: PropTypes.object.isRequired,
+  speciesResources: PropTypes.object.isRequired,
+  experimentResources: PropTypes.object.isRequired,
   CardType: PropTypes.func.isRequired
 }
 
