@@ -51,6 +51,28 @@ exports[`HomePagePanel matches snapshot 1`] = `
               foo3
             </a>
           </li>
+          <li
+            className="tabs-title"
+          >
+            <a
+              aria-selected="false"
+              id="test1"
+              onClick={[Function]}
+            >
+              test1
+            </a>
+          </li>
+          <li
+            className="tabs-title"
+          >
+            <a
+              aria-selected="false"
+              id="test2"
+              onClick={[Function]}
+            >
+              test2
+            </a>
+          </li>
         </ul>
       </div>
       <div
@@ -60,7 +82,7 @@ exports[`HomePagePanel matches snapshot 1`] = `
         <div
           className="row margin-bottom-xxlarge"
         >
-          I am a component
+          I am a species component
         </div>
       </div>
       <div
@@ -98,10 +120,10 @@ exports[`HomePagePanel matches snapshot 1`] = `
           >
             <a
               aria-selected="true"
-              id="test1"
+              id="Latest"
               onClick={[Function]}
             >
-              test1
+              Latest
             </a>
           </li>
           <li
@@ -109,10 +131,10 @@ exports[`HomePagePanel matches snapshot 1`] = `
           >
             <a
               aria-selected="false"
-              id="test2"
+              id="panel"
               onClick={[Function]}
             >
-              test2
+              panel
             </a>
           </li>
         </ul>
@@ -123,7 +145,9 @@ exports[`HomePagePanel matches snapshot 1`] = `
       >
         <div
           className="row margin-bottom-xxlarge"
-        />
+        >
+          I am a experiment component
+        </div>
       </div>
       <div
         className="row align-row-to-bottom"
