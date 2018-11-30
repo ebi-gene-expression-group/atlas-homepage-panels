@@ -66,7 +66,8 @@ HomePagePanel.propTypes = {
   host: PropTypes.string.isRequired,
   speciesResources: PropTypes.object.isRequired,
   experimentResources: PropTypes.object.isRequired,
-  CardType: PropTypes.func.isRequired
+  SpeciesCardType: PropTypes.func.isRequired,
+  LatestExperimentCardType: PropTypes.func.isRequired
 }
 
 export default HomePagePanel
