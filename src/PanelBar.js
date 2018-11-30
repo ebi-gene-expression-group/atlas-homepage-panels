@@ -22,8 +22,8 @@ class PanelBar extends React.Component {
       <li className="tabs-title" key={panelName}>
         {
           panelName==this.state.panelName ? 
-            <a aria-selected="true"  id={panelName} key={panelName} onClick={this.changePanel}>{panelName}</a> :
-            <a aria-selected="false" id={panelName} key={panelName} onClick={this.changePanel}>{panelName}</a>
+            <a aria-selected="true"  id={panelName} onClick={this.changePanel}>{panelName}</a> :
+            <a aria-selected="false" id={panelName} onClick={this.changePanel}>{panelName}</a>
         }
       </li>
     )
