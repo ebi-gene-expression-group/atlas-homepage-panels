@@ -23,35 +23,35 @@ class HomePagePanel extends React.Component {
   render() {
   	const {host, speciesResources, experimentResources, SpeciesCardType, LatestExperimentCardType} = this.props
   	return (
-  		<div className="row expanded margin-top-large" data-equalizer>
+  		<div className={`row expanded margin-top-large`} data-equalizer>
 
-	    	<div className="small-12 medium-12 large-6 columns">
-				  <div className="callout experiment-list-latest padding-bottom-for-button" data-equalizer-watch>
+	    	<div className={`small-12 medium-12 columns`}>
+				  <div className={`callout padding-bottom-for-button`} data-equalizer-watch>
             <PanelBar panelNames={Object.keys(speciesResources)} onClick={this.changePanel}/>
-            <div className="tabs-content" data-tabs-content="browse-by-tabs">
-						  <div className="row margin-bottom-xxlarge">
+            <div className={`tabs-content`} data-tabs-content={`browse-by-tabs`}>
+						  <div className={`row margin-bottom-xxlarge`}>
 				        <PanelContent host={host} panelName={this.state.speciesTabName} resource={speciesResources} CardType={SpeciesCardType} />
 				      </div>
 			    	</div>
-            <div className="row align-row-to-bottom">
-              <div className="small-6 small-centered columns margin-top-large">
-                <a id="viewAllLink" href={`${host}experiments`} className="button float-center">View all species</a>
+            <div className={`row align-row-to-bottom`}>
+              <div className={`small-6 small-centered columns margin-top-large`}>
+                <a id={`viewAllLink`} href={`${host}experiments`} className={`button float-center`}>View all species</a>
               </div>
 			      </div>
 			    </div>
 			  </div>
 
-			  <div className="small-12 medium-12 large-6 columns">
-			    <div className="callout experiment-list-latest padding-bottom-for-button" data-equalizer-watch>
+			  <div className={`small-12 medium-12 columns`}>
+			    <div className={`callout padding-bottom-for-button`} data-equalizer-watch>
 				    <PanelBar panelNames={Object.keys(experimentResources)} onClick={this.changePanel}/>
-				    <div className="tabs-content" data-tabs-content="browse-by-tabs">
-				    	<div className="row margin-bottom-xxlarge">
+				    <div className={`tabs-content`} data-tabs-content={`browse-by-tabs`}>
+				    	<div className={`row margin-bottom-xxlarge`}>
 				        	<PanelContent host={host} panelName={this.state.experimentTabName} host={host} resource={experimentResources} CardType={LatestExperimentCardType} />
-				        </div>
+				      </div>
 			    	</div> 
-			      <div className="row align-row-to-bottom">
-              <div className="small-6 small-centered columns margin-top-large">
-                <a id="viewAllLink" href={`${host}experiments`} className="button float-center">View all species</a>
+			      <div className={`row align-row-to-bottom`}>
+              <div className={`small-6 small-centered columns margin-top-large`}>
+                <a id={`viewAllLink`} href={`${host}experiments`} className={`button float-center`}>View all species</a>
 			        </div>
 			       </div>
 			    </div>

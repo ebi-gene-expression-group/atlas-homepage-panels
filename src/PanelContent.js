@@ -4,9 +4,9 @@ import HCAlogo from './assets/img/HCA-logo.jpg'
 
 const PanelContent = ({panelName, host, resource, CardType}) => 
   panelName === `Featured` ?     
-    <div className="small-4 columns combo text-center padding-top-medium">
+    <div className={`small-4 columns combo text-center padding-top-medium`}>
       <a href={`${host}${resource[panelName]}`}>
-          <img className="margin-bottom-large" src={HCAlogo}  height="400" />
+          <img className={`margin-bottom-large`} src={HCAlogo}  height={`400`} />
       </a>
     </div>
     :
@@ -14,7 +14,7 @@ const PanelContent = ({panelName, host, resource, CardType}) =>
 
 
 PanelContent.propTypes = {
-  panelName: PropTypes.string.isReq,
+  panelName: PropTypes.string.isRequired,
   host: PropTypes.string,
   resource: PropTypes.object,
   CardType: PropTypes.func
