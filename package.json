@@ -29,7 +29,8 @@
     "url": "https://github.com/ebi-gene-expression-group/scxa-home-landing-page"
   },
   "dependencies": {
-    "atlas-homepage-cards": "file:../atlas-homepage-cards",
+    "atlas-homepage-cards": "^1.2.0",
+    "atlas-latest-experiments-cards": "^1.2.1",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
