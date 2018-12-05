@@ -1,6 +1,6 @@
 {
   "name": "scxa-homepage-panels",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "This is a part of single-cell home page containing two panels with species cards on the left and latest experiments cards on the right",
   "main": "lib/index.js",
   "scripts": {
