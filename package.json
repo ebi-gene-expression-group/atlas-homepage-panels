@@ -1,7 +1,7 @@
 {
-  "name": "scxa-homepage-panels",
+  "name": "atlas-homepage-panels",
   "version": "0.1.0",
-  "description": "This is a part of single-cell home page containing two panels with species cards on the left and latest experiments cards on the right",
+  "description": "This is a part of atlas and single-cell homepage containing two stacked panels",
   "main": "lib/index.js",
   "scripts": {
     "prepack": "rm -rf lib && babel src -d lib --copy-files",
@@ -33,11 +33,7 @@
     "atlas-latest-experiments-cards": "^1.2.1",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
-    "styled-components": "^4.1.2",
-    "urijs": "^1.19.1"
+    "react-dom": "^16.4.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
@@ -45,25 +41,20 @@
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
-    "ajv": "^6.5.4",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
     "clean-webpack-plugin": "^0.1.19",
     "coveralls": "^3.0.2",
-    "css-loader": "^1.0.1",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "eslint": "^5.8.0",
     "eslint-config-gene-expression": "^0.4.2",
     "fetch-mock": "^7.2.2",
     "jest": "^23.6.0",
-    "react-test-renderer": "^16.6.0",
-    "style-loader": "^0.23.1",
-    "url-loader": "^1.1.2",
+    "react-test-renderer": "^16.6.3",
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10",
-    "whatwg-fetch": "^3.0.0"
+    "webpack-dev-server": "^3.1.10"
   }
 }
