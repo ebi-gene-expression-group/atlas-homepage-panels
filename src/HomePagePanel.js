@@ -26,7 +26,6 @@ class HomePagePanel extends React.Component {
   		<div className={`row expanded margin-top-large`} data-equalizer>
 
 	    	<div className={`small-12 medium-12 columns`}>
-				  <div className={`callout padding-bottom-for-button`} data-equalizer-watch>
             <PanelBar panelNames={Object.keys(speciesResources)} onClick={this.changePanel}/>
             <div className={`tabs-content`} data-tabs-content={`browse-by-tabs`}>
 						  <div className={`row margin-bottom-xxlarge`}>
@@ -38,11 +37,9 @@ class HomePagePanel extends React.Component {
                 <a id={`viewAllLink`} href={`${host}experiments`} className={`button float-center`}>View all species</a>
               </div>
 			      </div>
-			    </div>
 			  </div>
 
 			  <div className={`small-12 medium-12 columns`}>
-			    <div className={`callout padding-bottom-for-button`} data-equalizer-watch>
 				    <PanelBar panelNames={Object.keys(experimentResources)} onClick={this.changePanel}/>
 				    <div className={`tabs-content`} data-tabs-content={`browse-by-tabs`}>
 				    	<div className={`row margin-bottom-xxlarge`}>
@@ -54,7 +51,6 @@ class HomePagePanel extends React.Component {
                 <a id={`viewAllLink`} href={`${host}experiments`} className={`button float-center`}>View all species</a>
 			        </div>
 			       </div>
-			    </div>
 			  </div>
 
 		  </div>
