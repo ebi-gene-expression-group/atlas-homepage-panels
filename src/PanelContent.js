@@ -5,7 +5,7 @@ const PanelContent = ({panelName, host, resource, CardType}) =>
   panelName === `Featured` ?     
     <div className={`small-4 columns combo text-center padding-top-medium`}>
       <a href={`${host}${resource[panelName]}`}>
-          <img className={`margin-bottom-large`} src={`${host}/resources/images/logos/human_cell_atlas.png`}  height={`400`} />
+          <img className={`experiment-thumbnail`} src={`${host}/resources/images/logos/human_cell_atlas.png`}/>
       </a>
     </div>
     :
