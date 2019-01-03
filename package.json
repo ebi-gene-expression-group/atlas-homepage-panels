@@ -1,6 +1,6 @@
 {
   "name": "atlas-homepage-panels",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "This is a part of atlas and single-cell homepage containing two stacked panels",
   "main": "lib/index.js",
   "scripts": {
