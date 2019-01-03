@@ -28,15 +28,15 @@ class HomePagePanel extends React.Component {
 	    	<div className={`small-12 medium-12 columns`}>
             <PanelBar panelNames={Object.keys(speciesResources)} onClick={this.changePanel}/>
             <div className={`tabs-content`} data-tabs-content={`browse-by-tabs`}>
-						  <div className={`row margin-bottom-xxlarge`}>
+						  <div className={`row margin-bottom-xxlarge`} style={{`max-width`:`none`}}>
 				        <PanelContent host={host} panelName={this.state.speciesTabName} resource={speciesResources} CardType={SpeciesCardType} />
 				      </div>
 			    	</div>
-            <div className={`row align-row-to-bottom`}>
-              <div className={`small-6 small-centered columns margin-top-large`}>
-                <a id={`viewAllLink`} href={`${host}experiments`} className={`button float-center`}>View all species</a>
-              </div>
-			      </div>
+
+            <div className={`small-6 small-centered columns margin-top-large`}>
+              <a id={`viewAllLink`} href={`${host}experiments`} className={`button float-center`}>View all species</a>
+            </div>
+
 			  </div>
 
 			  {
@@ -44,15 +44,13 @@ class HomePagePanel extends React.Component {
             <div className={`small-12 medium-12 columns`}>
   				    <PanelBar panelNames={Object.keys(experimentResources)} onClick={this.changePanel}/>
   				    <div className={`tabs-content`} data-tabs-content={`browse-by-tabs`}>
-  				    	<div className={`row margin-bottom-xxlarge`}>
+  				    	<div className={`row margin-bottom-xxlarge`} style={{`max-width`:`none`}}>
   				        	<PanelContent host={host} panelName={this.state.experimentTabName} host={host} resource={experimentResources} CardType={LatestExperimentCardType} />
   				      </div>
-  			    	</div> 
-  			      <div className={`row align-row-to-bottom`}>
-                <div className={`small-6 small-centered columns margin-top-large`}>
-                  <a id={`viewAllLink`} href={`${host}experiments`} className={`button float-center`}>View all species</a>
-  			        </div>
-  			       </div>
+  			    	</div>
+              <div className={`small-6 small-centered columns margin-top-large`}>
+                <a id={`viewAllLink`} href={`${host}experiments`} className={`button float-center`}>View all species</a>
+              </div>
   			   </div>
         }
 		  </div>
