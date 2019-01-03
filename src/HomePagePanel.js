@@ -9,7 +9,7 @@ class HomePagePanel extends React.Component {
     super(props)
     this.state = {
     	speciesTabName: Object.keys(this.props.speciesResources)[0],
-    	experimentTabName: Object.keys(this.props.experimentResources)[0]
+    	experimentTabName: this.props.experimentResources && Object.keys(this.props.experimentResources)[0]
     }
     this.changePanel = this.changePanel.bind(this)
   }
@@ -40,7 +40,7 @@ class HomePagePanel extends React.Component {
 			  </div>
 
 			  {
-          LatestExperimentCardType && 
+          LatestExperimentCardType &&
             <div className={`small-12 medium-12 columns`}>
   				    <PanelBar panelNames={Object.keys(experimentResources)} onClick={this.changePanel}/>
   				    <div className={`tabs-content`} data-tabs-content={`browse-by-tabs`}>
