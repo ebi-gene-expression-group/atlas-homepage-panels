@@ -28,7 +28,7 @@ class HomePagePanel extends React.Component {
 	    	<div className={`small-12 medium-12 columns`}>
             <PanelBar panelNames={Object.keys(speciesResources)} onClick={this.changePanel}/>
             <div className={`tabs-content`} data-tabs-content={`browse-by-tabs`}>
-						  <div className={`row margin-bottom-xxlarge`} style={{`max-width`:`none`}}>
+						  <div className={`row margin-bottom-xxlarge`} style={{"max-width":`none`}}>
 				        <PanelContent host={host} panelName={this.state.speciesTabName} resource={speciesResources} CardType={SpeciesCardType} />
 				      </div>
 			    	</div>
@@ -44,7 +44,7 @@ class HomePagePanel extends React.Component {
             <div className={`small-12 medium-12 columns`}>
   				    <PanelBar panelNames={Object.keys(experimentResources)} onClick={this.changePanel}/>
   				    <div className={`tabs-content`} data-tabs-content={`browse-by-tabs`}>
-  				    	<div className={`row margin-bottom-xxlarge`} style={{`max-width`:`none`}}>
+  				    	<div className={`row margin-bottom-xxlarge`} style={{"max-width":`none`}}>
   				        	<PanelContent host={host} panelName={this.state.experimentTabName} host={host} resource={experimentResources} CardType={LatestExperimentCardType} />
   				      </div>
   			    	</div>
