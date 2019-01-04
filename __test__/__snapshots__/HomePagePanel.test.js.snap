@@ -77,24 +77,25 @@ exports[`HomePagePanel matches snapshot 1`] = `
     >
       <div
         className="row margin-bottom-xxlarge"
+        style={
+          Object {
+            "max-width": "none",
+          }
+        }
       >
         I am a species component
       </div>
     </div>
     <div
-      className="row align-row-to-bottom"
+      className="small-6 small-centered columns margin-top-large"
     >
-      <div
-        className="small-6 small-centered columns margin-top-large"
+      <a
+        className="button float-center"
+        href="http://experiments"
+        id="viewAllLink"
       >
-        <a
-          className="button float-center"
-          href="http://experiments"
-          id="viewAllLink"
-        >
-          View all species
-        </a>
-      </div>
+        View all species
+      </a>
     </div>
   </div>
   <div
@@ -136,24 +137,25 @@ exports[`HomePagePanel matches snapshot 1`] = `
     >
       <div
         className="row margin-bottom-xxlarge"
+        style={
+          Object {
+            "max-width": "none",
+          }
+        }
       >
         I am a experiment component
       </div>
     </div>
     <div
-      className="row align-row-to-bottom"
+      className="small-6 small-centered columns margin-top-large"
     >
-      <div
-        className="small-6 small-centered columns margin-top-large"
+      <a
+        className="button float-center"
+        href="http://experiments"
+        id="viewAllLink"
       >
-        <a
-          className="button float-center"
-          href="http://experiments"
-          id="viewAllLink"
-        >
-          View all species
-        </a>
-      </div>
+        View all species
+      </a>
     </div>
   </div>
 </div>
