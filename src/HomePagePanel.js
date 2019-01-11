@@ -33,7 +33,7 @@ class HomePagePanel extends React.Component {
 				      </div>
 			    	</div>
 
-            <div className={`small-6 small-centered columns margin-top-large`}>
+            <div className={`small-6 small-centered columns margin-top-large`} style={{"max-width":`none`}}>
               <a id={`viewAllLink`} href={`${host}experiments`} className={`button float-center`}>View all species</a>
             </div>
 
@@ -48,8 +48,8 @@ class HomePagePanel extends React.Component {
   				        	<PanelContent host={host} panelName={this.state.experimentTabName} host={host} resource={experimentResources} CardType={LatestExperimentCardType} />
   				      </div>
   			    	</div>
-              <div className={`small-6 small-centered columns margin-top-large`}>
-                <a id={`viewAllLink`} href={`${host}experiments`} className={`button float-center`}>View all species</a>
+              <div className={`small-6 small-centered columns margin-top-large`} style={{"max-width":`none`}}>
+                <a id={`viewAllLink`} href={`${host}experiments`} className={`button float-center`}>View all experiments</a>
               </div>
   			   </div>
         }
