@@ -1,7 +1,21 @@
+const speciesResources = {
+  foo1: `link1`,
+  foo2: `link2`,
+  foo3: `link3`,
+  test1: `endpoint1`,
+  test2: `endpoint2`
+}
 
-const panelNameAList = [`foo1`, `foo2`, `foo3`]
-const panelNameBList = [`test1`, `test2`]
+const experimentResources = { 
+  Latest: `endpoint3`,
+  panel: `test1`
+}
 
+const host = `http://`
+
+const SpeciesCardType = () => `I am a species component`
+
+const LatestExperimentCardType = () => `I am a experiment component`
 
 // Stolen from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 const getRandomInt = (min, max) => {
@@ -36,4 +50,4 @@ const latestExperimentEntries = () => {
   ]
 }
 
-export {panelNameAList, panelNameBList, getRandomInt, latestExperimentEntries}
+export {getRandomInt, latestExperimentEntries, speciesResources, experimentResources, host, SpeciesCardType, LatestExperimentCardType}

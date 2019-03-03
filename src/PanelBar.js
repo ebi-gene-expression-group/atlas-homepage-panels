@@ -12,27 +12,25 @@ class PanelBar extends React.Component {
   }
 
   changePanel(event){
-    this.setState({
-      panelName: event.target.id
-    })
+    this.setState({panelName: event.target.id})
     this.props.onClick(event)
   }
 
   render() {
     var panelNames = this.props.panelNames
     var panelNameList = panelNames.map(panelName => 
-      <li className="tabs-title" key={panelName}>
+      <li className={`tabs-title`} key={panelName}>
         {
           panelName==this.state.panelName ? 
-           <a aria-selected="true"  id={panelName} key={panelName} onClick={this.changePanel}>{panelName}</a> :
-           <a aria-selected="false" id={panelName} key={panelName} onClick={this.changePanel}>{panelName}</a>
+            <a aria-selected={`true`}  id={panelName} onClick={this.changePanel}>{panelName}</a> :
+            <a aria-selected={`false`} id={panelName} onClick={this.changePanel}>{panelName}</a>
         }
       </li>
     )
 
     return (
       <div>
-        <ul className="tabs" data-tabs id="browse-by-tabs">
+        <ul className={`tabs`} data-tabs id={`browse-by-tabs`}>
           {panelNameList}
         </ul>
       </div>

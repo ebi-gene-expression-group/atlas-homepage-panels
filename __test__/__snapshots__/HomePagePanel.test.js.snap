@@ -6,197 +6,156 @@ exports[`HomePagePanel matches snapshot 1`] = `
   data-equalizer={true}
 >
   <div
-    className="small-12 medium-12 large-6 columns"
+    className="small-12 medium-12 columns"
   >
-    <div
-      className="callout experiment-list-latest padding-bottom-for-button"
-      data-equalizer-watch={true}
-    >
-      <div>
-        <ul
-          className="tabs"
-          data-tabs={true}
-          id="browse-by-tabs"
-        >
-          <li
-            className="tabs-title"
-          >
-            <a
-              aria-selected="true"
-              id="foo1"
-              onClick={[Function]}
-            >
-              foo1
-            </a>
-          </li>
-          <li
-            className="tabs-title"
-          >
-            <a
-              aria-selected="false"
-              id="foo2"
-              onClick={[Function]}
-            >
-              foo2
-            </a>
-          </li>
-          <li
-            className="tabs-title"
-          >
-            <a
-              aria-selected="false"
-              id="foo3"
-              onClick={[Function]}
-            >
-              foo3
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div
-        className="tabs-content"
-        data-tabs-content="browse-by-tabs"
+    <div>
+      <ul
+        className="tabs"
+        data-tabs={true}
+        id="browse-by-tabs"
       >
-        <div
-          className="row margin-bottom-xxlarge"
-        >
-          <div
-            className="row column"
-          >
-            <div
-              className="callout alert small"
-            >
-              <h5>
-                Oops!
-              </h5>
-              <p>
-                There was a problem communicating with the server. Please try again later.
-                <br />
-                If the error persists, in order to help us debug the issue, please copy the URL and this message and send it to us via 
-                <a
-                  href="https://www.ebi.ac.uk/support/gxasc"
-                >
-                  the EBI Support & Feedback system
-                </a>
-                :
-              </p>
-              <code>
-                ReferenceError: fetch is not defined
-              </code>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="row align-row-to-bottom"
-      >
-        <div
-          className="small-6 small-centered columns margin-top-large"
+        <li
+          className="tabs-title"
         >
           <a
-            className="button float-center"
-            href="linkexperiments"
-            id="viewAllLink"
+            aria-selected="true"
+            id="foo1"
+            onClick={[Function]}
           >
-            View all species
+            foo1
           </a>
-        </div>
+        </li>
+        <li
+          className="tabs-title"
+        >
+          <a
+            aria-selected="false"
+            id="foo2"
+            onClick={[Function]}
+          >
+            foo2
+          </a>
+        </li>
+        <li
+          className="tabs-title"
+        >
+          <a
+            aria-selected="false"
+            id="foo3"
+            onClick={[Function]}
+          >
+            foo3
+          </a>
+        </li>
+        <li
+          className="tabs-title"
+        >
+          <a
+            aria-selected="false"
+            id="test1"
+            onClick={[Function]}
+          >
+            test1
+          </a>
+        </li>
+        <li
+          className="tabs-title"
+        >
+          <a
+            aria-selected="false"
+            id="test2"
+            onClick={[Function]}
+          >
+            test2
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="tabs-content"
+      data-tabs-content="browse-by-tabs"
+    >
+      <div
+        className="row margin-bottom-xxlarge"
+        style={
+          Object {
+            "max-width": "none",
+          }
+        }
+      >
+        I am a species component
       </div>
+    </div>
+    <div
+      className="small-6 small-centered columns margin-top-large"
+    >
+      <a
+        className="button float-center"
+        href="http://experiments"
+        id="viewAllLink"
+      >
+        View all species
+      </a>
     </div>
   </div>
   <div
-    className="small-12 medium-12 large-6 columns"
+    className="small-12 medium-12 columns"
   >
-    <div
-      className="callout experiment-list-latest padding-bottom-for-button"
-      data-equalizer-watch={true}
-    >
-      <div>
-        <ul
-          className="tabs"
-          data-tabs={true}
-          id="browse-by-tabs"
-        >
-          <li
-            className="tabs-title"
-          >
-            <a
-              aria-selected="true"
-              id="test1"
-              onClick={[Function]}
-            >
-              test1
-            </a>
-          </li>
-          <li
-            className="tabs-title"
-          >
-            <a
-              aria-selected="false"
-              id="test2"
-              onClick={[Function]}
-            >
-              test2
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div
-        className="tabs-content"
-        data-tabs-content="browse-by-tabs"
+    <div>
+      <ul
+        className="tabs"
+        data-tabs={true}
+        id="browse-by-tabs"
       >
-        <div
-          className="row margin-bottom-xxlarge"
-        >
-          <div
-            className="small-4 columns combo text-center padding-top-medium"
-          >
-            <span>
-              I am a card for 
-              HCA
-            </span>
-             
-            <br />
-            <a
-              href="link/hca"
-            >
-              <img
-                className="margin-bottom-large experiment-thumbnail"
-                height="800"
-                src="test-file-stub"
-              />
-              <h6>
-                <a
-                  href="/gxa/experiments/E-MTAB-4344"
-                >
-                  Human tissues
-                </a>
-                <br />
-                <a
-                  href="/gxa/experiments/E-GEOD-26284"
-                >
-                  Human cells
-                </a>
-              </h6>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div
-        className="row align-row-to-bottom"
-      >
-        <div
-          className="small-6 small-centered columns margin-top-large"
+        <li
+          className="tabs-title"
         >
           <a
-            className="button float-center"
-            href="link/experiments"
-            id="viewAllLink"
+            aria-selected="true"
+            id="Latest"
+            onClick={[Function]}
           >
-            View all species
+            Latest
           </a>
-        </div>
+        </li>
+        <li
+          className="tabs-title"
+        >
+          <a
+            aria-selected="false"
+            id="panel"
+            onClick={[Function]}
+          >
+            panel
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="tabs-content"
+      data-tabs-content="browse-by-tabs"
+    >
+      <div
+        className="row margin-bottom-xxlarge"
+        style={
+          Object {
+            "max-width": "none",
+          }
+        }
+      >
+        I am a experiment component
       </div>
+    </div>
+    <div
+      className="small-6 small-centered columns margin-top-large"
+    >
+      <a
+        className="button float-center"
+        href="http://experiments"
+        id="viewAllLink"
+      >
+        View all species
+      </a>
     </div>
   </div>
 </div>
